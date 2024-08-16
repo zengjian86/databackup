@@ -114,10 +114,10 @@ cd_tar_parent_path() {
 }
 #全备份
 full_backup() {
-   tar_file=$FILE_PATH/${FILE_PREFIX}_full.tar.gz #完全备份文件名
-   tar_file_snap=$FILE_PATH/${FILE_PREFIX}_full.snap #备份成功后的快照文件名
-   tar_snap=$TARGET_PATH/$SNAP_FILE  #前一次备份的快照名称
-   tar_snap_bak=$tar_snap.bak        #备份快照名称
+   local tar_file=$FILE_PATH/${FILE_PREFIX}_full.tar.gz #完全备份文件名
+   local tar_file_snap=$FILE_PATH/${FILE_PREFIX}_full.snap #备份成功后的快照文件名
+   local tar_snap=$TARGET_PATH/$SNAP_FILE  #前一次备份的快照名称
+   local tar_snap_bak=$tar_snap.bak        #备份快照名称
 
    if [ -f $tar_file ]; then
       echo "$tar_file 已存在,完全备份终止!" >&2
@@ -148,10 +148,10 @@ full_backup() {
 
 #增量备份
 incr_backup() {
-   tar_file=$FILE_PATH/${FILE_PREFIX}_incr.tar.gz #完全备份文件名
-   tar_file_snap=$FILE_PATH/${FILE_PREFIX}_incr.snap #备份成功后的快照文件名
-   tar_snap=$TARGET_PATH/$SNAP_FILE  #前一次备份的快照名称
-   tar_snap_bak=$tar_snap.bak        #备份快照名称
+   local tar_file=$FILE_PATH/${FILE_PREFIX}_incr.tar.gz #完全备份文件名
+   local tar_file_snap=$FILE_PATH/${FILE_PREFIX}_incr.snap #备份成功后的快照文件名
+   local tar_snap=$TARGET_PATH/$SNAP_FILE  #前一次备份的快照名称
+   local tar_snap_bak=$tar_snap.bak        #备份快照名称
 
    if [ -f $tar_file ]; then
       echo "$tar_file 已存在,备份终止!" >&2
